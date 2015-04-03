@@ -29,7 +29,7 @@ angular.module('Transilien', ['ngRoute','uiGmapgoogle-maps'])
 
         $scope.stations = [];
 
-        $http.get(urlJSON + '&rows=300&start=0').success(function (data) {
+        $http.get(urlJSON + '&rows=30&start=0').success(function (data) {
             $scope.stations = data.records;
             $scope.stations.forEach(format, $scope.stations);
         });
