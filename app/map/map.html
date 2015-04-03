@@ -1,0 +1,43 @@
+<div id="tf-about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class=" wrappmap">
+                    <ui-gmap-google-map zoom="map.zoom" center="map.center" options="map.options" draggable="true">
+                        <ui-gmap-marker
+                                ng-repeat="station in stations | filter:search"
+                                coords="station.geometry.coordinates"
+                                click="goTo(station.recordid)"
+                                idKey="station.recordid">
+                        </ui-gmap-marker>
+                    </ui-gmap-google-map>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-text">
+                    <div class="section-title">
+                        <h2>Carte de démonstration</h2>
+                        <h4>Vraiment une démo...</h4>
+                        <hr>
+                        <div class="clearfix"></div>
+                    </div>
+                    <p class="intro">On peut à terme imaginer que les gares soient cliquables et que l'on puisse accéder à des informations telles que</p>
+                    <ul class="about-list">
+                        <li>
+                            <span class="fa fa-dot-circle-o"></span>
+                            <strong>Libellé</strong> - <em>Le nom officiel de la gare</em>
+                        </li>
+                        <li>
+                            <span class="fa fa-dot-circle-o"></span>
+                            <strong>Adresse</strong> - <em>Pour trouver facilement la gare</em>
+                        </li>
+                        <li>
+                            <span class="fa fa-dot-circle-o"></span>
+                            <strong>Zone</strong> - <em>Connaître le tarif Navigo en vigueur</em>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
