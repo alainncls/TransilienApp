@@ -9,13 +9,15 @@ angular.module('Transilien')
         });
 
         $scope.getMin = function (first,second){
-            if(first == undefined) {
-                var s = second.replace(".", ",");
-                return s;
-            }
-            console.log(f + " - " + s);
-            var f = first.replace(".", ",");
-            var s = second.replace(".", ",");
-            return Math.min(f, s);
+            //var value = parseFloat(second.replace(',', '.'));
+            //console.log(value);
+            //if(first == undefined) {
+            //    var s = second.replace(".", ",");
+            //    return s;
+            //}
+            ////console.log(f + " - " + s);
+            //var f = first.replace(".", ",");
+            //var s = second.replace(".", ",");
+            //return Math.min(f, s);
         }
     }]);
