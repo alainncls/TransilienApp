@@ -8,16 +8,16 @@ angular.module('Transilien')
             $scope.prices = data.records;
         });
 
-        $scope.getMin = function (first,second){
-            //var value = parseFloat(second.replace(',', '.'));
-            //console.log(value);
-            //if(first == undefined) {
-            //    var s = second.replace(".", ",");
-            //    return s;
-            //}
-            ////console.log(f + " - " + s);
-            //var f = first.replace(".", ",");
-            //var s = second.replace(".", ",");
-            //return Math.min(f, s);
+        $scope
+
+        $scope.getPrice = function (first, second){
+            var s = parseFloat(second);
+
+            if(first === undefined) {
+                return s;
+            }
+
+            var f = parseFloat(first);
+            return f;
         }
     }]);
